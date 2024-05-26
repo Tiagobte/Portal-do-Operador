@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Operação</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Diário de Operação</h1>
+    <form id="diario-form">
+        <label for="usina">Usina:</label>
+        <input type="text" id="usina" name="usina"><br>
+
+        <label for="unidade-geradora">Unidade Geradora:</label>
+        <input type="text" id="unidade-geradora" name="unidade-geradora"><br>
+
+        <label for="tipo-evento">Tipo de Evento:</label>
+        <input type="text" id="tipo-evento" name="tipo-evento"><br>
+
+        <label for="data-hora">Data e Hora:</label>
+        <input type="datetime-local" id="data-hora" name="data-hora"><br>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao"></textarea><br>
+
+        <button type="button" onclick="adicionarEvento()">Adicionar Evento</button>
+    </form>
+
+    <div id="lista-eventos"></div>
+
+    <button id="gerar-pdf-btn">Gerar PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
