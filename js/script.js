@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Função para limpar o formulário após adicionar um evento
   function limparFormulario() {
-    document.getElementById('diario-form').reset();
+    document.getElementById('registro-form').reset();
   }
 
   // Função para exibir os eventos na página
@@ -195,4 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Adicionando evento de clique para o botão de gerar PDF
   document.getElementById('gerar-pdf-btn').addEventListener('click', gerarPDF);
+
+  // Associando a função adicionarEvento ao botão "Adicionar Evento"
+  document.getElementById('adicionar-evento-btn').addEventListener('click', adicionarEvento);
 });
