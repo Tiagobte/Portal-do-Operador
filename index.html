@@ -1,38 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diário de Operação</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Portal do Operador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Diário de Operação</h1>
-    <form id="diario-form">
-        <label for="usina">Usina:</label>
-        <input type="text" id="usina" name="usina"><br>
-
-        <label for="unidade-geradora">Unidade Geradora:</label>
-        <input type="text" id="unidade-geradora" name="unidade-geradora"><br>
-
-        <label for="tipo-evento">Tipo de Evento:</label>
-        <input type="text" id="tipo-evento" name="tipo-evento"><br>
-
-        <label for="data-hora">Data e Hora:</label>
-        <input type="datetime-local" id="data-hora" name="data-hora"><br>
-
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" name="descricao"></textarea><br>
-
-        <button type="button" onclick="adicionarEvento()">Adicionar Evento</button>
-    </form>
-
-    <div id="lista-eventos"></div>
-
-    <button id="gerar-pdf-btn">Gerar PDF</button>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="js/script.js"></script>
+    <header>
+        <h1>Portal do Operador</h1>
+    </header>
+    <div class="container">
+        <p>Bem-vindo ao Portal do Operador. Este é um exemplo de como você pode melhorar o visual da sua página.</p>
+        <a href="escala_sobreaviso.html" class="btn">Escala de Sobreaviso</a>
+        <a href="lista_telefonica.html" class="btn">Lista Telefônica</a>
+        <a href="registro_eventos.html" class="btn">Registro de Eventos</a>
+    </div>
 </body>
 </html>

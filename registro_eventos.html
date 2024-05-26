@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Eventos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Registro de Eventos</h1>
+    <form id="registro-form" class="mb-4">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="usina">Usina</label>
+          <select id="usina" class="form-control" required>
+            <option value="">Selecione a usina</option>
+            <option value="ASU">PCH ALTO SUCURIÚ</option>
+            <option value="BOC">PCH BOCAIUVA</option>
+            <!-- Adicione outras usinas conforme necessário -->
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="unidade-geradora">Unidade Geradora</label>
+          <input type="text" class="form-control" id="unidade-geradora" name="unidade-geradora" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="tipo-evento">Tipo de Evento</label>
+          <select id="tipo-evento" name="tipo-evento" class="form-control" required>
+            <option value="">Selecione o tipo de evento</option>
+            <option value="Alarme">Alarme Importante</option>
+            <option value="Comunicado">Comunicado Importante</option>
+            <option value="Desligamento">DAU - Desligamento Automático</option>
+            <option value="Desligamento">DEM - Desligamento de Emergência</option>
+            <option value="Desligamento">DCO - Desligamento por Conveniência Operativa</option>
+            <option value="Partida">Partida Unidade Geradora</option>
+            <option value="Parada">Parada Unidade Geradora</option>
+            <option value="Acionamento">Acionamento de Sobreaviso</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="data-hora">Data e Hora</label>
+          <input type="datetime-local" class="form-control" id="data-hora" name="data-hora" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="descricao">Descrição</label>
+          <textarea class="form-control" id="descricao" name="descricao" rows="3" required></textarea>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary mr-2" onclick="adicionarEvento()">Adicionar Evento</button>
+      <button type="button" class="btn btn-secondary" onclick="gerarPDF()">Gerar PDF</button>
+    </form>
+
+    <div id="lista-eventos" class="list-group"></div>
+    <div class="mt-4">
+      <a href="index.html" class="btn btn-info mr-2">Voltar para Página Inicial</a>
+      <a href="lista_telefonica.html" class="btn btn-warning">Ver Lista Telefônica</a>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    // Definição da função gerarPDF() fora do escopo do evento DOMContentLoaded
+    function gerarPDF() {
+      const doc = new jsPDF();
+      
+      // Restante do código da função gerarPDF...
+
+    }
+  </script>
+</body>
+</html>
