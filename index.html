@@ -53,15 +53,22 @@
       color: #666;
       margin-top: 20px;
     }
+    .btn {
+      border-radius: 25px;
+    }
     .btn-custom {
       background-color: #007bff;
       border-color: #007bff;
       color: #fff;
-      transition: background-color 0.3s ease;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
     .btn-custom:hover {
       background-color: #0056b3;
       border-color: #0056b3;
+      transform: translateY(-3px);
     }
   </style>
 </head>
@@ -95,7 +102,7 @@
           <div class="card-body">
             <h3 class="card-title">Escala de Sobreaviso</h3>
             <p class="card-text">Acesse a escala de sobreaviso para os operadores.</p>
-            <a href="C:\xampp\htdocs\COR\escala_sobreaviso.html" class="btn btn-lg btn-success btn-block">Escala de Sobreaviso</a>
+            <a href="escala_sobreaviso.html" class="btn btn-lg btn-custom btn-block">Escala de Sobreaviso</a>
           </div>
         </div>
       </div>

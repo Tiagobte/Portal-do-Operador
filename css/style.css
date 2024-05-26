@@ -91,29 +91,3 @@ input, select, textarea {
 .evento-body {
   margin-top: 5px;
 }
-body {
-  background-color: #f8f9fa;
-}
-
-h1 {
-  color: #343a40;
-}
-
-.evento-item {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background-color: #ffffff;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
-
-.evento-header {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.evento-body {
-  font-size: 1rem;
-  color: #6c757d;
-}
