@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escala de Sobreaviso</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala de Sobreaviso</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <h1>Portal Operador Remoto</h1>
-    </div>
-    <nav class="navbar">
-      <button class="nav-btn" onclick="window.location.href='registro_eventos.html'">Registro de Eventos</button>
-      <button class="nav-btn" onclick="window.location.href='lista_telefonica.html'">Lista Telefônica</button>
-    </nav>
-  </header>
 
-  <div class="container">
-    <h2>Escala de Sobreaviso</h2>
-    <!-- Conteúdo da Escala de Sobreaviso -->
-  </div>
+<div class="header">
+    <h1>Escala de Sobreaviso</h1>
+    <div class="responsavel">
+        <input id="responsavel1" type="text" placeholder="Responsável 1">
+        <input id="responsavel2" type="text" placeholder="Responsável 2">
+        <input id="responsavel3" type="text" placeholder="Responsável 3">
+        <input id="responsavel4" type="text" placeholder="Responsável 4">
+        <button onclick="exibirEscalaSobreaviso()">Mostrar Escala de Sobreaviso</button>
+    </div>
+</div>
+
+<div class="container">
+    <div id="escalasobreaviso"></div>
+    <div id="mensagem"></div>
+</div>
+
+<script src="js/script_escala.js"></script>
 </body>
 </html>
