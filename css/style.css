@@ -1,130 +1,31 @@
+/* style.css */
+
+/* Estilos globais */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-  }
-  
-  .header {
+}
+
+header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
-  }
-  
-  .header h1 {
+}
+
+.logo h1 {
     margin: 0;
-  }
-  
-  .responsavel {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .responsavel input {
-    margin-right: 10px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .responsavel button {
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .responsavel button:hover {
-    background-color: #0056b3;
-  }
-  
-  .container {
-    margin-top: 30px;
-    padding: 20px;
-  }
-  
-  .card {
-    background-color: #fff;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-title {
-    font-size: 24px;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .card-text {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  .btn {
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .btn-custom {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-custom:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-    transform: translateY(-3px);
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      margin-top: 60px; /* Ajuste conforme necessário */
-    }
-  }
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .logo h1 {
-    margin: 0;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-  }
-  
-  .nav-btn {
+}
+
+.nav-btn {
     background-color: #007bff;
     border: none;
     color: #fff;
@@ -133,18 +34,65 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .nav-btn:hover {
+}
+
+.nav-btn:hover {
     background-color: #0056b3;
-  }
-  
-  .container {
+}
+
+.container {
     margin-top: 30px;
     padding: 20px;
-  }
-  
-  h2 {
+}
+
+h2 {
     margin-bottom: 20px;
-  }
-  
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos para a página de Escala de Sobreaviso */
+.header {
+    background-color: #4CAF50;
+}
+
+.header h1 {
+    margin: 0;
+    color: #fff;
+}
+
+.responsavel {
+    margin-bottom: 20px;
+}
+
+.responsavel input {
+    margin-right: 10px;
+}
+
+.responsavel button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.responsavel button:hover {
+    background-color: #0056b3;
+}
