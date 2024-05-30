@@ -1,98 +1,119 @@
-/* style.css */
 
-/* Estilos globais */
+/* Adicione este estilo ao seu arquivo style.css */
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff; /* Altere a cor conforme necessário */
+    box-shadow: 0 0 5px #007bff; /* Adiciona um efeito de sombra quando o input está focado */
+}
+
+
+/* Adicione este estilo ao seu arquivo style.css */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+
+
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+  
+  .jumbotron {
+    background-color: transparent;
     text-align: center;
-}
-
-.logo h1 {
-    margin: 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.nav-btn {
-    background-color: #007bff;
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  
+  .jumbotron h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .jumbotron p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
     border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .btn-custom {
+    background-color: #007bff;
+    border-color: #007bff;
     color: #fff;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.nav-btn:hover {
-    background-color: #0056b3;
-}
-
-.container {
-    margin-top: 30px;
-    padding: 20px;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-.btn {
-    border-radius: 5px;
     padding: 10px 20px;
     font-size: 18px;
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-.btn:hover {
+  }
+  
+  .btn-custom:hover {
     background-color: #0056b3;
-}
-
-/* Estilos específicos para a página de Escala de Sobreaviso */
-.header {
-    background-color: #4CAF50;
-}
-
-.header h1 {
-    margin: 0;
-    color: #fff;
-}
-
-.responsavel {
-    margin-bottom: 20px;
-}
-
-.responsavel input {
-    margin-right: 10px;
-}
-
-.responsavel button {
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.responsavel button:hover {
-    background-color: #0056b3;
-}
+    border-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  

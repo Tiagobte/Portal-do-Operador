@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escala de Sobreaviso</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<div class="header">
-    <h1>Escala de Sobreaviso</h1>
-    <div class="responsavel">
-        <input id="responsavel1" type="text" placeholder="Responsável 1">
-        <input id="responsavel2" type="text" placeholder="Responsável 2">
-        <input id="responsavel3" type="text" placeholder="Responsável 3">
-        <input id="responsavel4" type="text" placeholder="Responsável 4">
-        <button onclick="exibirEscalaSobreaviso()">Mostrar Escala de Sobreaviso</button>
-    </div>
+<div class="container mt-5">
+    <h1 class="mb-4">Escala de Sobreaviso</h1>
+    <form id="escala-form">
+        <div class="form-group">
+            <label for="numUsinas">Número de Usinas:</label>
+            <input type="number" id="numUsinas" class="form-control mb-2" placeholder="Digite o número de usinas" required>
+        </div>
+        <div id="inputsResponsaveis"></div>
+        <button type="button" class="btn btn-primary" onclick="adicionarInputsResponsaveis()">Adicionar Responsáveis</button>
+        <button type="button" class="btn btn-primary" onclick="exibirEscalaSobreaviso()">Mostrar Escala de Sobreaviso</button>
+    </form>
+    <div id="escalasobreaviso" class="mt-4"></div>
+    <button class="btn btn-secondary mt-3" onclick="window.location.href='index.html'">Voltar ao Menu Principal</button>
 </div>
-
-<div class="container">
-    <div id="escalasobreaviso"></div>
-    <div id="mensagem"></div>
-    <button class="btn-voltar" onclick="window.location.href = 'index.html';">Voltar ao Menu Principal</button>
-</div>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/script_escala.js"></script>
 </body>
 </html>

@@ -53,9 +53,6 @@
       color: #666;
       margin-top: 20px;
     }
-    .btn {
-      border-radius: 25px;
-    }
     .btn-custom {
       background-color: #007bff;
       border-color: #007bff;
@@ -73,6 +70,11 @@
   </style>
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <button class="nav-btn logout-btn btn btn-danger" onclick="logout()">Logout</button>
+    </nav>
+  </header>
   <div class="container">
     <div class="jumbotron">
       <h1 class="display-4">Bem-vindo ao Portal do Operador</h1>
@@ -108,7 +110,10 @@
       </div>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function logout() {
+      window.location.href = 'login.html';
+    }
+  </script>
 </body>
 </html>
