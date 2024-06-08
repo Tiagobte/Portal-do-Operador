@@ -30,13 +30,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Validar e-mail
+    // Validar email
     if (empty(trim($_POST["email"]))) {
-        $email_err = "Por favor, insira o e-mail.";
+        $email_err = "Por favor, insira um email.";
     } else {
-        $email = trim($_POST["email"]);
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $email_err = "Formato de e-mail inválido.";
+        $sql = "SELECT id FROM users WHERE email = ?";
+        
+        if ($stmt = $conn->prepare($sql)) {
+            $stmt->bind_param("s", $param_email);
+            $param_email = trim($_POST["email"]);
+            
+            if ($stmt->execute()) {
+                $stmt->store_result();
+                
+                if ($stmt->num_rows == 1) {
+                    $email_err = "Este email já está em uso.";
+                } else {
+                    $email = trim($_POST["email"]);
+                }
+            } else {
+                echo "Algo deu errado. Por favor, tente novamente mais tarde.";
+            }
+            $stmt->close();
         }
     }
 
@@ -142,11 +157,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
         <label>Nome de Usuário</label>
         <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
-      </div>    
+      </div>
       <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-        <label>E-mail</label>
+        <label>Email</label>
         <input type="email" name="email" class="form-control" value="<?php echo $email; ?>">
-      </div>  
+      </div>    
       <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
         <label>Senha</label>
         <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">

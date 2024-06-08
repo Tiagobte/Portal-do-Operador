@@ -57,4 +57,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo 'Por favor, forneça um endereço de e-mail.';
     }
 }
-?>
+

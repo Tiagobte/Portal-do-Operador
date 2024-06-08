@@ -1,11 +1,12 @@
 <?php
-session_start();
+session_start(); // Inicie a sessão antes de acessar as variáveis de sessão
+
 if (!isset($_SESSION['username'])) {
+    // Se 'username' não estiver definido na sessão, redirecione para a página de login
     header("Location: login.php");
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -38,26 +39,6 @@ if (!isset($_SESSION['username'])) {
         .jumbotron p {
             font-size: 18px;
             font-weight: 400;
-            color: #666;
-            margin-top: 20px;
-        }
-        .card {
-            background-color: #fff;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card-title {
-            font-size: 24px;
-            font-weight: 500;
-            color: #333;
-        }
-        .card-text {
-            font-size: 16px;
             color: #666;
             margin-top: 20px;
         }
@@ -121,12 +102,12 @@ if (!isset($_SESSION['username'])) {
         </div>
         <nav class="navbar">
             <div>
-                <button class="nav-btn" onclick="window.location.href='index.php'">Diário de Operação</button>
+                <button class="nav-btn" onclick="window.location.href='registros_eventos.html'">Registro De Eventos</button>
                 <button class="nav-btn" onclick="window.location.href='escala_sobreaviso.html'">Escala de Sobreaviso</button>
                 <button class="nav-btn" onclick="window.location.href='lista_telefonica.html'">Lista Telefônica</button>
             </div>
             <div>
-                <span class="user-info">Olá, <?php echo $_SESSION['username']; ?></span>
+                <span class="user-info">Olá, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
                 <button class="nav-btn logout-btn" onclick="logout()">Logout</button>
             </div>
         </nav>
@@ -136,42 +117,14 @@ if (!isset($_SESSION['username'])) {
         <div class="jumbotron">
             <h1 class="display-4">Bem-vindo ao Portal do Operador</h1>
             <p class="lead">Este é um portal destinado aos operadores de usinas elétricas.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h3 class="card-title">Registro de Eventos</h3>
-                        <p class="card-text">Registre os eventos ocorridos nas usinas.</p>
-                        <a href="registro_eventos.html" class="btn btn-lg btn-custom btn-block">Registrar Eventos</a>
-                    </div>
-                </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h3 class="card-title">Lista Telefônica</h3>
-                        <p class="card-text">Visualize a lista telefônica de contato.</p>
-                        <a href="lista_telefonica.html" class="btn btn-lg btn-info btn-block">Ver Lista Telefônica</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h3 class="card-title">Escala de Sobreaviso</h3>
-                        <p class="card-text">Acesse a escala de sobreaviso para os operadores.</p>
-                        <a href="escala_sobreaviso.html" class="btn btn-lg btn-custom btn-block">Escala de Sobreaviso</a>
-                    </div>
-                </div>
-            </div>
+            <!-- Outros cards aqui -->
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // Função de logout
         function logout() {
             window.location.href = 'logout.php';
         }

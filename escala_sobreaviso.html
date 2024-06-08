@@ -13,16 +13,22 @@
     <form id="escala-form">
         <div class="form-group">
             <label for="numUsinas">Número de Usinas:</label>
-            <input type="number" id="numUsinas" class="form-control mb-2" placeholder="Digite o número de usinas" required>
+            <input type="number" id="numUsinas" class="form-control mb-2" placeholder="Digite o número de usinas" required min="1">
         </div>
         <div id="inputsResponsaveis"></div>
-        <button type="button" class="btn btn-primary" onclick="adicionarInputsResponsaveis()">Adicionar Responsáveis</button>
-        <button type="button" class="btn btn-primary" onclick="exibirEscalaSobreaviso()">Mostrar Escala de Sobreaviso</button>
+        <!-- Melhor usar event listeners em vez de onclick -->
+        <button type="button" class="btn btn-primary" id="adicionar-responsaveis">Adicionar Responsáveis</button>
+        <button type="button" class="btn btn-primary" id="mostrar-escala">Mostrar Escala de Sobreaviso</button>
     </form>
     <div id="escalasobreaviso" class="mt-4"></div>
     <button class="btn btn-secondary mt-3" onclick="window.location.href='index.php'">Voltar ao Menu Principal</button>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/script_escala.js"></script>
+<script>
+    // Mover event listeners para o arquivo JS se possível
+    document.getElementById('adicionar-responsaveis').addEventListener('click', adicionarInputsResponsaveis);
+    document.getElementById('mostrar-escala').addEventListener('click', exibirEscalaSobreaviso);
+</script>
 </body>
 </html>
